@@ -163,3 +163,21 @@ body {
     color: var(--apple-gray);
     background-color: var(--apple-white);
 }
+
+/* Animation Styles */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for product cards */
+.product-card.animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+.product-card.animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+.product-card.animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+.product-card.animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
